@@ -1,0 +1,214 @@
+:root {
+    --primary: #6C63FF;
+    --dark: #1a1a2e;
+    --light: #ffffff;
+    --glass: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--light);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* Container Utama */
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Foto Profil */
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(108, 99, 255, 0.5);
+    transition: transform 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* Bio Singkat */
+h1 { margin-bottom: 5px; font-size: 1.8rem; }
+p.bio { color: #ccc; margin-bottom: 20px; font-size: 0.9rem; }
+
+/* Sosial Media */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--glass);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.social-btn:hover {
+    background: var(--primary);
+    transform: translateY(-5px);
+}
+
+/* Bio Lengkap */
+.bio-lengkap {
+    margin-bottom: 20px;
+}
+.bio-lengkap p {
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Tombol Utama */
+.main-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, var(--primary), #4a47a3);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.main-btn:active {
+    transform: scale(0.95);
+}
+
+/* MODAL / POPUP */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: #252540;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    border-radius: 20px;
+    padding: 20px;
+    position: relative;
+    overflow-y: auto;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: sticky;
+    top: 0;
+    float: right;
+    background: #ff4757;
+    color: white;
+    border: none;
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Grid Gambar Project */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.gallery-item:hover { transform: scale(1.02); }
+
+/* LIST PDF (Sertifikat) */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.pdf-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.pdf-item i {
+    color: #ff4757; /* Merah untuk ikon PDF */
+    font-size: 1.2rem;
+}
+
+.pdf-item:hover {
+    background: var(--primary);
+    transform: translateX(5px);
+    border-color: var(--primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+::-webkit-scrollbar-track { background: #1a1a2e; }

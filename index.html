@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Fauzan</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <img src="foto.png" alt="Foto Profil" class="profile-img" data-aos="zoom-in">
+
+        <div data-aos="fade-up" data-aos-delay="100">
+            <h1>Zul Rizki Nur Fauzan</h1>
+            <p class="bio">Content Creator | Python Developer | Web Development</p>
+        </div>
+
+        <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://tiktok.com/@zan_ravenclaw" class="social-btn" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://instagram.com/raven_clawws" class="social-btn" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/6287818901869" class="social-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+        <div class="bio-lengkap" data-aos="fade-up" data-aos-delay="250">
+            <p>Halo!  Nama saya adalah Zul Rizki Nur Fauzan, saya adalah seorang programer yang suka menuangkan ide saya untuk di visualisasikan kedalam web atau project mini di python, untuk kamu yang mau membuat website bisa hubungi saya yaa.</p>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.1); margin: 20px 0;">
+
+        <button onclick="openModal('projectModal')" class="main-btn" data-aos="fade-left" data-aos-delay="300">
+            <i class="fas fa-images"></i> Lihat Project Saya
+        </button>
+
+        <button onclick="openModal('certModal')" class="main-btn" data-aos="fade-right" data-aos-delay="400">
+            <i class="fas fa-file-pdf"></i> Lihat Sertifikat
+        </button>
+        </div>
+
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('projectModal')">&times;</button>
+            <h2>Project Saya</h2>
+            <div class="grid-gallery">
+                <img src="bikin-mini-game.png" class="gallery-item">
+                <img src="bikin-qr.png" class="gallery-item">
+                <img src="hand-gesture.jpg" class="gallery-item">
+                <img src="yolo.png" class="gallery-item">
+            </div>
+        </div>
+    </div>
+
+    <div id="certModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('certModal')">&times;</button>
+            <h2>Sertifikat Saya</h2>
+            <p style="font-size: 0.8rem; color: #aaa; margin-bottom: 15px;">Klik untuk membuka file PDF.</p>
+            
+            <div class="cert-list">
+                <a href="apk-gen-ai-with-microsoft-azure.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 1. Sertifikat Membangun APK Gen AI
+                </a>
+
+                <a href="belajar-ai.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 2. Sertifikat Belajar Dasar AI
+                </a>
+
+                <a href="belajar-html.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 3. Sertifikat Belajar HTML
+                </a>
+
+                <a href="data-science-with-python.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 4. Sertifikat Data Science Dengan Python
+                </a>
+
+                <a href="data-science-with-r.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 5. Sertifikat Data Science Dengan R
+                </a>
+
+                <a href="financial-literacy.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 6. Sertifikat Financial Literacy
+                </a>
+
+                <a href="learn-r-with-ai.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 7. Sertifikat Learn R With AI
+                </a>
+
+                <a href="penerapan-data-science-dengan-microsoft-azure.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 8. Sertifikat Penerapan Data Science
+                </a>
+
+                <a href="belajar-python.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 9. Sertifikat Belajar Python
+                </a>
+
+                <a href="belajar-sql.pdf" target="_blank" class="pdf-item">
+                    <i class="fas fa-file-pdf"></i> 10. Sertifikat Belajar SQL
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
